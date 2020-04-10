@@ -16,6 +16,11 @@ namespace SingleResponsibilityPrinciple
         public class Employee
         {
             ILogger _logger;
+
+            /// <summary>
+            /// Dependency injection
+            /// </summary>
+            /// <param name="logger"></param>
             public Employee(ILogger logger)
             {
                 _logger = logger;
@@ -45,6 +50,7 @@ namespace SingleResponsibilityPrinciple
         }
 
         /// <summary>
+        /// A class should take care of a Single Responsibility
         /// Log message to a file.
         /// </summary>
         public class LogFile : ILogger
@@ -57,6 +63,7 @@ namespace SingleResponsibilityPrinciple
         }
 
         /// <summary>
+        /// A class should take care of a Single Responsibility
         /// Logs message to Database
         /// </summary>
         public class DBLogger: ILogger
